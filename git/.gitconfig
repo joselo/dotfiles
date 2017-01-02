@@ -1,0 +1,31 @@
+[user]
+	email = joseloc@gmail.com
+	name = joselo
+
+[alias]
+        lod = log --oneline --decorate --color
+        co = checkout
+        ci = commit
+
+# The following code is not mine.
+# Taken from http://www.kunday.com/post/29594688306/git-config-hacks
+[color]
+        branch = auto
+        diff = auto
+        status = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
