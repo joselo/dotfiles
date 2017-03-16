@@ -103,10 +103,10 @@ source $ZSH/oh-my-zsh.sh
 
 # Alias for run command in a docker container
 dcrun(){
-    docker-compose run --rm app $1;
+    docker-compose run --rm app $@;
 }
 
 # Alias for exec command in a docker container
 dcexec(){
-    docker-compose exec app $1;
+    docker-compose exec app $@;
 }
