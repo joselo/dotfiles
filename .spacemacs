@@ -164,7 +164,7 @@ values."
                                :size 23
                                :weight regular
                                :width regular
-                               :powerline-scale 1.0)
+                               :powerline-scale 1.2)
 
    ;; dotspacemacs-default-font '("PragmataPro"
    ;;                             :size 23
@@ -383,6 +383,9 @@ you should place your code here."
   (set-language-environment "UTF-8")
   (set-default-coding-systems 'utf-8)
 
+  ;; Fonts, best rendering
+  (add-to-list 'default-frame-alist '(font . "PragmataProMono-17" ))
+  (set-face-attribute 'default t :font "PragmataProMono-17" )
 
   ;;RUST CONFIG
 
