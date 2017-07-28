@@ -97,9 +97,9 @@ source $ZSH/oh-my-zsh.sh
 #fi
 
 
-#if [[ $TERM != 'linux' ]]; then
-#    export TERM=xterm-256color
-#fi
+if [[ $TERM != 'linux' ]]; then
+    export TERM=xterm-256color
+fi
 
 # Alias for run command in a docker container
 dcrun(){
