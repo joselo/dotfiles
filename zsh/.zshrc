@@ -110,3 +110,5 @@ dcrun(){
 dcexec(){
     docker-compose exec app $@;
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
