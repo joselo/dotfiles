@@ -15,6 +15,9 @@ sudo pacman -S ttf-hack
 echo "Installing Ag The Silver Searcher"
 sudo pacman -S the_silver_searcher
 
+echo "Installing Ack"
+sudo pacman -S ack
+
 echo "Installing Yarn and other dependencies"
 sudo pacman -S yarn
 sudo yarn global add prettier eslint eslint-plugin-vue
