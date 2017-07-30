@@ -18,3 +18,6 @@ sudo yarn global add prettier
 
 echo "Installing Ag The Silver Searcher"
 sudo pacman -S the_silver_searcher
+
+echo "Installing eslint"
+sudo pacman -S eslint
