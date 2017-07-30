@@ -14,7 +14,7 @@ sudo pacman -S ttf-hack
 
 echo "Installing Yarn and other dependencies"
 sudo pacman -S yarn
-yarn global add prettier
+sudo yarn global add prettier
 
 echo "Installing Ag The Silver Searcher"
 sudo pacman -S the_silver_searcher
