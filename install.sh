@@ -12,7 +12,8 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/themes/power
 echo "Installing ttf-hackfont"
 sudo pacman -S ttf-hack
 
-echo "Installing Yarn"
+echo "Installing Yarn and other dependencies"
+sudo pacman -S yarn
 yarn global add prettier
 
 echo "Installing Ag The Silver Searcher"
