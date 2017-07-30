@@ -12,12 +12,10 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/themes/power
 echo "Installing ttf-hackfont"
 sudo pacman -S ttf-hack
 
-echo "Installing Yarn and other dependencies"
-sudo pacman -S yarn
-sudo yarn global add prettier
-
 echo "Installing Ag The Silver Searcher"
 sudo pacman -S the_silver_searcher
 
-echo "Installing eslint"
-sudo pacman -S eslint
+echo "Installing Yarn and other dependencies"
+sudo pacman -S yarn
+sudo yarn global add prettier eslint eslint-plugin-vue
+
