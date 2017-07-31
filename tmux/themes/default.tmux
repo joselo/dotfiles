@@ -1,0 +1,15 @@
+set-option -g status-attr "none"
+set-option -g status-justify "left"
+set-option -g status-left-attr "none"
+set-option -g status-left-length "80"
+set-option -g status-right-attr "none"
+set-option -g status-right-length "80"
+set-window-option -g window-status-activity-attr "none"
+set-window-option -g window-status-attr "none"
+set-window-option -g window-status-separator ""
+
+set-option -g status-left "#[fg=colour248, bg=colour241] #S #[fg=colour241, bg=colour237, nobold, noitalics, nounderscore]"
+set-option -g status-right "#[fg=colour239, bg=colour237, nobold, nounderscore, noitalics]#[fg=colour246,bg=colour239] %d %b %R #[fg=colour250, bg=colour239, nobold, noitalics, nounderscore]#[fg=colour237, bg=colour248] #(~/.dotfiles/tmux/battstat.sh -c "AC:" -d "BAT:" {i} {p} {t})"
+
+set-window-option -g window-status-current-format "#[fg=colour239, bg=colour248, :nobold, noitalics, nounderscore]#[fg=colour239, bg=colour214] #I #[fg=colour239, bg=colour214, bold] #W #[fg=colour214, bg=colour237, nobold, noitalics, nounderscore]"
+set-window-option -g window-status-format "#[fg=colour237,bg=colour239,noitalics]#[fg=colour223,bg=colour239] #I #[fg=colour223, bg=colour239] #W #[fg=colour239, bg=colour237, noitalics]"
