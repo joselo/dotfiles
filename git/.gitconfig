@@ -1,6 +1,6 @@
 [user]
 	email = joseloc@gmail.com
-	name = joselo
+	name = Jose Carrion
 
 [alias]
         lod = log --oneline --decorate --color
