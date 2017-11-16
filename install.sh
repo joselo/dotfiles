@@ -22,3 +22,5 @@ echo "Installing Yarn and other dependencies"
 sudo pacman -S yarn
 sudo yarn global add prettier eslint eslint-plugin-vue
 
+echo "Installing wmctrl for fullscreen mode with gvim"
+sudo pacman -S wmctrl
