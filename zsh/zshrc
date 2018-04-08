@@ -122,3 +122,17 @@ dcexec(){
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Google Gloud
+source /usr/local/share/google-cloud-sdk/completion.zsh.inc
+source /usr/local/share/google-cloud-sdk/path.zsh.inc
+
+# RBenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+#AWSCli
+export PATH="$HOME/.local/bin:$PATH"
+
+# Rust Racer
+export RUST_SRC_PATH=$HOME/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src
