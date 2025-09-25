@@ -1,0 +1,33 @@
+[user]
+    name = Jose Carrion
+    email = joseloc@gmail.com
+
+[core]
+    editor = nvim
+    autocrlf = input
+
+[color]
+    ui = auto
+
+[alias]
+    st = status
+    co = checkout
+    ci = commit
+    br = branch
+    lg = log --oneline --graph --decorate --all
+    pushf = "!f() { git push origin --force-with-lease \"${1:-master}\"; }; f"
+
+[push]
+    default = simple
+
+[pull]
+    ff = only
+
+[credential]
+    helper = store
+
+[diff]
+    tool = meld
+
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"

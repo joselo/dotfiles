@@ -1,0 +1,5 @@
+require("custom.options")
+require("custom.keymaps")
+require("custom.terminal")
+require("custom.diagnostic")
+require("custom.tabs")
