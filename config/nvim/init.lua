@@ -23,3 +23,5 @@ require("lazy").setup({
 })
 
 -- vim.cmd("colorscheme onedark")
+-- vim.cmd.colorscheme("nanode")
+vim.cmd.colorscheme("conifer")
