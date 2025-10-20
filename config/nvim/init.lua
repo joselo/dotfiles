@@ -22,6 +22,6 @@ require("lazy").setup({
   rocks = { enabled = false }
 })
 
--- vim.cmd("colorscheme onedark")
+vim.cmd("colorscheme onedark")
 -- vim.cmd.colorscheme("nanode")
 -- vim.cmd.colorscheme("conifer")
