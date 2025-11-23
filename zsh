@@ -6,5 +6,8 @@ prompt pure
 
 alias db="psql -Upostgres"
 
+export FLYCTL_INSTALL="/home/joselo/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
 [[ -f ~/.secrets ]] && source ~/.secrets
 
