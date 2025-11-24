@@ -17,7 +17,8 @@ return {
 
     require('mason-lspconfig').setup({
       ensure_installed = {
-        "lua_ls"
+        "lua_ls",
+        "ruby_lsp"
       },
       handlers = {
         -- Default handler for all servers
@@ -37,6 +38,22 @@ return {
           lspconfig.expert.setup({
             cmd = { "/usr/bin/expert" },
             filetypes = { 'elixir', 'eelixir', 'heex' },
+          })
+        end,
+
+        -- Custom handler for Ruby
+        ["ruby"] = function()
+          local lspconfig = require("lspconfig")
+          lspconfig.ruby_lsp.setup({
+            init_options = {
+              formatter = 'standard',
+              linters = { 'standard' },
+              addonSettings = {
+                ["Ruby LSP Rails"] = {
+                  enablePendingMigrationsPrompt = false,
+                },
+              },
+            },
           })
         end,
       }

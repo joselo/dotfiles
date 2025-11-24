@@ -23,3 +23,7 @@ function LspDiagnostics()
 end
 
 vim.o.statusline = "%f %h%m%r%=%{v:lua.LspDiagnostics()} %l,%c"
+
+vim.o.updatetime = 250 -- tiempo de espera (ms)
+vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
