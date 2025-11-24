@@ -17,7 +17,6 @@ return {
 
     require('mason-lspconfig').setup({
       ensure_installed = {
-        "elixirls",
         "lua_ls"
       },
       handlers = {
@@ -33,14 +32,11 @@ return {
         end,
 
         -- Custom handler for Elixir
-        elixirls = function()
-          require('lspconfig').elixirls.setup({
-            settings = {
-              elixirLS = {
-                dialyzerEnabled = false,
-                fetchDeps = false,
-              }
-            }
+        ["expert"] = function()
+          local lspconfig = require("lspconfig")
+          lspconfig.expert.setup({
+            cmd = { "/usr/bin/expert" },
+            filetypes = { 'elixir', 'eelixir', 'heex' },
           })
         end,
       }
