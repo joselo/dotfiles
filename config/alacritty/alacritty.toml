@@ -1,14 +1,14 @@
 [font]
-size = 13.0
+size = 14.0
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
 
 [window]
 startup_mode = "Fullscreen"
-dynamic_padding = true
+dynamic_padding = false
 opacity = 0.9
 
 [window.padding]
-x = 1
-y = 1
+x = 0
+y = 0
