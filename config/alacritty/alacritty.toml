@@ -5,7 +5,7 @@ size = 14.0
 family = "JetBrainsMono Nerd Font"
 
 [window]
-startup_mode = "Fullscreen"
+# startup_mode = "Fullscreen"
 dynamic_padding = false
 opacity = 0.9
 
