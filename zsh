@@ -6,8 +6,10 @@ prompt pure
 
 alias db="psql -Upostgres"
 
-export FLYCTL_INSTALL="/home/joselo/.fly"
-export PATH="$FLYCTL_INSTALL/bin:$PATH"
+#export FLYCTL_INSTALL="/home/joselo/.fly"
+#export PATH="$FLYCTL_INSTALL/bin:$PATH"
+#
+export PATH="$HOME/.local/share/gem/ruby/3.3.0/bin:$PATH"
 
 [[ -f ~/.secrets ]] && source ~/.secrets
 

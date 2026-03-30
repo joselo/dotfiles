@@ -23,7 +23,7 @@ require("lazy").setup({
 })
 
 -- vim.cmd("colorscheme gruvbox-material")
-vim.cmd("colorscheme onedark")
+-- vim.cmd("colorscheme onedark")
 -- vim.cmd("colorscheme tairiki")
 -- vim.cmd("colorscheme dayfox")
 -- vim.cmd("colorscheme terafox")
