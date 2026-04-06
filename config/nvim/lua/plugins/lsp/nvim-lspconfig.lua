@@ -19,7 +19,8 @@ return {
       ensure_installed = {
         "lua_ls",
         "ruby_lsp",
-        "gopls"
+        "gopls",
+        "elixirls",
       },
       handlers = {
         -- Default handler for all servers
@@ -34,12 +35,8 @@ return {
         end,
 
         -- Custom handler for Elixir
-        ["expert"] = function()
-          local lspconfig = require("lspconfig")
-          lspconfig.expert.setup({
-            cmd = { "/usr/bin/expert" },
-            filetypes = { 'elixir', 'eelixir', 'heex' },
-          })
+        elixirls = function()
+          require('lspconfig').elixirls.setup({})
         end,
 
         -- Custom handler for Ruby
