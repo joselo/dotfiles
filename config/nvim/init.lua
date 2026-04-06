@@ -17,11 +17,12 @@ require("custom")
 require("lazy").setup({
   { import = "plugins" },
   { import = "plugins.themes" },
-  -- { import = "plugins.lsp" }
+  { import = "plugins.lsp" }
 }, {
   rocks = { enabled = false }
 })
 
+vim.cmd("colorscheme duskfox")
 -- vim.cmd("colorscheme gruvbox-material")
 -- vim.cmd("colorscheme onedark")
 -- vim.cmd("colorscheme tairiki")

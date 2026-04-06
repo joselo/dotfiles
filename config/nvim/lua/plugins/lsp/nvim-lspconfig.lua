@@ -18,7 +18,8 @@ return {
     require('mason-lspconfig').setup({
       ensure_installed = {
         "lua_ls",
-        "ruby_lsp"
+        "ruby_lsp",
+        "gopls"
       },
       handlers = {
         -- Default handler for all servers
@@ -52,6 +53,21 @@ return {
                 ["Ruby LSP Rails"] = {
                   enablePendingMigrationsPrompt = false,
                 },
+              },
+            },
+          })
+        end,
+
+        -- Custom handler for Go
+        ["gopls"] = function()
+          local lspconfig = require("lspconfig")
+          lspconfig.gopls.setup({
+            settings = {
+              gopls = {
+                analyses = {
+                  unusedparams = true,
+                },
+                staticcheck = true,
               },
             },
           })
