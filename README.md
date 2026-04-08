@@ -32,7 +32,7 @@ Install the system tools:
 I use `nvim`, `kitty`, and a custom `.gitconfig` file. Create the symlinks as needed:
 
 	ln -s ~/.dotfiles/config/nvim ~/.config/nvim
-	ln -s ~/.dotfiles/config/kitty ~/.config/kitty
+	ln -s ~/.dotfiles/config/ghostty ~/.config/ghostty
 	ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 
 ## 5. Configure Zsh
