@@ -22,6 +22,7 @@ return {
         "ruby_lsp",
         "gopls",
         "elixirls",
+        "pyright",
       },
       handlers = {
         -- Default handler for all servers
