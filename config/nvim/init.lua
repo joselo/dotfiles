@@ -22,9 +22,9 @@ require("lazy").setup({
   rocks = { enabled = false }
 })
 
--- vim.cmd("colorscheme duskfox")
+vim.cmd("colorscheme duskfox")
 -- vim.cmd("colorscheme gruvbox-material")
 -- vim.cmd("colorscheme onedark")
 -- vim.cmd("colorscheme tairiki")
-vim.cmd("colorscheme dayfox")
+-- vim.cmd("colorscheme dayfox")
 -- vim.cmd("colorscheme terafox")
