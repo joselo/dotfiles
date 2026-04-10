@@ -28,3 +28,4 @@ require("lazy").setup({
 -- vim.cmd("colorscheme tairiki")
 -- vim.cmd("colorscheme dayfox")
 -- vim.cmd("colorscheme terafox")
+vim.cmd.colorscheme('token')
