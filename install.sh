@@ -16,7 +16,7 @@ mkdir -p ~/.config
 echo "Installing packages..."
 sudo pacman -S --needed \
   fd fzf nodejs \
-  inotify-tools lazygit neovim kitty \
+  inotify-tools lazygit neovim kitty github-cli \
   ripgrep zsh git curl less \
   ttf-jetbrains-mono-nerd \
   bat xclip
