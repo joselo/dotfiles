@@ -19,7 +19,7 @@ sudo pacman -S --needed \
   inotify-tools lazygit neovim kitty github-cli \
   ripgrep zsh git curl less \
   ttf-jetbrains-mono-nerd \
-  bat xclip
+  bat xclip npm
 
 yay -S --needed zsh-pure-prompt
 
