@@ -1,10 +1,10 @@
 return {
   'neovim/nvim-lspconfig',
-  cmd = {'LspInfo', 'LspInstall', 'LspStart'},
-  event = {'BufReadPre', 'BufNewFile'},
+  cmd = { 'LspInfo', 'LspInstall', 'LspStart' },
+  event = { 'BufReadPre', 'BufNewFile' },
   dependencies = {
-    {'hrsh7th/cmp-nvim-lsp'},
-    {'williamboman/mason-lspconfig.nvim'},
+    { 'hrsh7th/cmp-nvim-lsp' },
+    { 'williamboman/mason-lspconfig.nvim' },
   },
   config = function()
     -- LSP Zero setup
@@ -12,17 +12,14 @@ return {
     lsp_zero.extend_lspconfig()
 
     lsp_zero.on_attach(function(client, bufnr)
-      lsp_zero.default_keymaps({buffer = bufnr})
+      lsp_zero.default_keymaps({ buffer = bufnr })
       lsp_zero.buffer_autoformat()
     end)
 
     require('mason-lspconfig').setup({
       ensure_installed = {
         "lua_ls",
-        "ruby_lsp",
-        "gopls",
         "elixirls",
-        "pyright",
       },
       handlers = {
         -- Default handler for all servers
@@ -40,39 +37,7 @@ return {
         elixirls = function()
           require('lspconfig').elixirls.setup({})
         end,
-
-        -- Custom handler for Ruby
-        ["ruby"] = function()
-          local lspconfig = require("lspconfig")
-          lspconfig.ruby_lsp.setup({
-            init_options = {
-              formatter = 'standard',
-              linters = { 'standard' },
-              addonSettings = {
-                ["Ruby LSP Rails"] = {
-                  enablePendingMigrationsPrompt = false,
-                },
-              },
-            },
-          })
-        end,
-
-        -- Custom handler for Go
-        ["gopls"] = function()
-          local lspconfig = require("lspconfig")
-          lspconfig.gopls.setup({
-            settings = {
-              gopls = {
-                analyses = {
-                  unusedparams = true,
-                },
-                staticcheck = true,
-              },
-            },
-          })
-        end,
       }
     })
   end
 }
-
