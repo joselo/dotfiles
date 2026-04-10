@@ -16,15 +16,17 @@ mkdir -p ~/.config
 echo "Installing packages..."
 sudo pacman -S --needed \
   fd fzf nodejs \
-  inotify-tools lazygit neovim \
+  inotify-tools lazygit neovim kitty \
   ripgrep zsh git curl less \
-  ttf-jetbrains-mono-nerd
+  ttf-jetbrains-mono-nerd \
+  bat xclip
 
 yay -S --needed zsh-pure-prompt
 
 # Create symlinks
 echo "Creating symlinks..."
 ln -sf ~/.dotfiles/config/nvim ~/.config/nvim
+ln -sf ~/.dotfiles/config/kitty ~/.config/kitty
 ln -sf ~/.dotfiles/gitconfig ~/.gitconfig
 
 # Generate .zshrc
