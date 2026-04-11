@@ -21,7 +21,7 @@ sudo pacman -S --needed \
   ttf-jetbrains-mono-nerd \
   bat xclip npm
 
-yay -S --needed zsh-pure-prompt
+yay -S --needed zsh-pure-prompt tree-sitter-cli
 
 # Create symlinks
 echo "Creating symlinks..."
