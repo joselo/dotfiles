@@ -50,6 +50,7 @@ Run only the scripts you need:
 sh ~/.dotfiles/scripts/postgres.sh
 sh ~/.dotfiles/scripts/elixir.sh
 sh ~/.dotfiles/scripts/ansible.sh
+sh ~/.dotfiles/scripts/ruby.sh
 ```
 
 ---
