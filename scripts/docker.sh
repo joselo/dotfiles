@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-echo "Installing Docker..."
-sudo pacman -S --needed docker docker-compose
+echo "Installing Docker and plugins..."
+sudo pacman -S --needed docker docker-compose docker-buildx
 
 echo "Enabling and starting Docker service..."
 sudo systemctl enable --now docker
@@ -10,12 +10,18 @@ sudo systemctl enable --now docker
 echo "Adding $USER to the docker group..."
 sudo usermod -aG docker "$USER"
 
+# Apply group changes to the socket just in case
+sudo chown root:docker /var/run/docker.sock
+
 echo "Docker $(docker --version) ready!"
+echo "Buildx $(docker buildx version) ready!"
 
-# Reminder about group changes
-echo "Note: You may need to log out and back in for the group changes to take effect."
+echo -e "\n\033[0;32m[!] IMPORTANT:\033[0m"
+echo "To apply Docker group permissions, you MUST either:"
+echo "1. Run 'newgrp docker' in this terminal session."
+echo "2. Log out and log back in (recommended)."
 
-# Check for kernel mismatch (common in Arch Linux after updates)
+# Check for kernel mismatch
 RUNNING_KERNEL=$(uname -r)
 INSTALLED_KERNEL=$(pacman -Q linux | awk '{print $2}')
 
