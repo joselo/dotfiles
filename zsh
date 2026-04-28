@@ -3,9 +3,8 @@ prompt pure
 
 alias db="psql -Upostgres"
 
-# Ruby Gems - Prepend to PATH to ensure we use our gems first
-export GEM_HOME="$HOME/.ruby"
-export PATH="$GEM_HOME/bin:$PATH"
+# Ruby Gems - Path for gems installed with 'gem install' as user
+export PATH="$PATH:$(ruby -e 'print Gem.user_dir' 2>/dev/null || echo "$HOME/.local/share/gem/ruby/3.4.0")/bin"
 
 export LC_ALL=C.UTF-8
 export LANG=C.UTF-8

@@ -1,18 +1,8 @@
 #!/bin/bash
 set -e
 
-echo "Installing Ruby and build dependencies..."
-sudo pacman -S --needed ruby base-devel
+echo "Installing Ruby and core libraries (ERB, OStruct, Base64)..."
+# In Ruby 3.4, these core libraries are packaged separately in Arch
+sudo pacman -Syu --needed ruby ruby-erb ruby-ostruct ruby-base64 base-devel
 
-echo "Configuring Ruby environment..."
-# Ensure the directory exists
-mkdir -p "$HOME/.ruby"
-
-# Set GEM_HOME for the current session
-export GEM_HOME="$HOME/.ruby"
-export PATH="$GEM_HOME/bin:$PATH"
-
-echo "Installing Bundler..."
-gem install bundler
-
-echo "Ruby $(ruby --version | awk '{print $2}') and Bundler $(bundle --version | awk '{print $3}') ready!"
+echo "Ruby $(ruby --version | awk '{print $2}') installed and complete!"
